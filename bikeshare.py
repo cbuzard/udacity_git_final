@@ -21,7 +21,8 @@ def get_filters():
         print("What city are you interested in? Please select Chicago, New York City, or Washington.")
         city = input(">> ")
         try:
-            city = city.strip().lower()
+            city = city.strip()
+            city = city.lower()
             assert(city in ('chicago', 'new york city', 'washington'))
             break
         except:
