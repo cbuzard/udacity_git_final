@@ -71,6 +71,8 @@ def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
 
+    Asks user if they want to view data and if so, outputs data.
+
     Args:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
