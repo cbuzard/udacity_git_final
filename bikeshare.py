@@ -21,7 +21,8 @@ def get_filters():
         print("What city are you interested in? Please select Chicago, New York City, or Washington.")
         city = input(">> ")
         try:
-            city = city.strip().lower()
+            city = city.strip()
+            city = city.lower()
             assert(city in ('chicago', 'new york city', 'washington'))
             break
         except:
@@ -145,7 +146,8 @@ def time_stats(df):
     print("The most common day of week is {}.".format(most_common_day_of_week))
 
     # TO DO: display the most common start hour
-    df['hour'] = df['Start Time'].dt.hour
+    start_hour = df['Start Time'].dt.hour
+    df['hour'] = start_hour
     most_common_hour = df['hour'].mode()[0]
     print("The most common start hour is {}.".format(most_common_hour))
 
@@ -249,6 +251,7 @@ def main():
         restart = restart.strip().lower()
             
         if restart.lower() != 'yes':
+            print("Oh, that's too bad!")
             break
 
 
