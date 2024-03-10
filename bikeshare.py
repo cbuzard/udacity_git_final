@@ -243,6 +243,7 @@ def main():
         restart = restart.strip().lower()
             
         if restart.lower() != 'yes':
+            print("Oh, that's too bad!")
             break
 
 
